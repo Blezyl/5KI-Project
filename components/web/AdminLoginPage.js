@@ -9,7 +9,7 @@ const AdminLoginPage = () => {
 
   const handleLogin = () => {
     // Simulate login logic (Replace with real authentication)
-    if (email === 'admin@gmailcom.com' && password === 'admin') {
+    if (email === 'admin@gmail.com' && password === 'admin') {
       // Navigate to admin dashboard on successful login
       navigate('/admindashboard');
     } else {
