@@ -1,3 +1,4 @@
+// File: SuperAdminLoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,8 +8,13 @@ const SuperAdminLoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Handle login logic here
-    console.log('Super Admin Login:', email, password);
+    // Simulate login logic (You should replace this with actual authentication logic)
+    if (email === '5kfinance@gmail.com' && password === 'superadmin') {
+      // Navigate to super admin dashboard on successful login
+      navigate('/superadmindashboard');
+    } else {
+      alert('Invalid credentials');
+    }
   };
 
   return (

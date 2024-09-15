@@ -1,3 +1,4 @@
+// File: AdminLoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,8 +8,13 @@ const AdminLoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Handle login logic here
-    console.log('Admin Login:', email, password);
+    // Simulate login logic (Replace with real authentication)
+    if (email === 'admin@gmailcom.com' && password === 'admin') {
+      // Navigate to admin dashboard on successful login
+      navigate('/admindashboard');
+    } else {
+      alert('Invalid credentials');
+    }
   };
 
   return (
