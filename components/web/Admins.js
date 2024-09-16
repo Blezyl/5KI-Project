@@ -2,7 +2,7 @@
 import React from 'react';
 import Sidebar from './Sidebar'; // Adjust the path if necessary
 
-const AdminDashboard = () => {
+const Admins = () => {
   return (
     <div style={{ display: 'flex' }}>
       {/* Sidebar */}
@@ -10,11 +10,10 @@ const AdminDashboard = () => {
       
       {/* Main content */}
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Admin Dashboard</h1>
-        <p>Welcome to the Admin dashboard.</p>
+        <h1>Welcome to Admins</h1>
       </div>
     </div>
   );
 };
 
-export default AdminDashboard;
+export default Admins;

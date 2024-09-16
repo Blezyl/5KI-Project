@@ -1,12 +1,12 @@
 // File: SuperAdminDashboard.js
 import React from 'react';
-import SuperAdSidebar from './SuperAdSidebar';
+import Sidebar from './Sidebar';
 
 const SuperAdminDashboard = () => {
   return (
     <div style={{ display: 'flex' }}>
       {/* Sidebar */}
-      <SuperAdSidebar />
+      <Sidebar />
       
       {/* Main content */}
       <div style={{ flex: 1, padding: '20px' }}>
