@@ -1,16 +1,21 @@
 // File: AdminDashboard.js
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './Sidebar'; // Adjust the path if necessary
 
 const Withdrawals = () => {
   return (
-    <div style={{ display: 'flex' }}>
-      {/* Sidebar */}
-      <Sidebar />
-      
-      {/* Main content */}
-      <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Welcome to Withdrawals</h1>
+    <div className="container-fluid">
+      <div className="row">
+        {/* Fixed Sidebar */}
+        <div className="col-2 p-0">
+          <Sidebar style={{ position: 'fixed', top: 0, left: 0, width: '200px', height: '100vh' }} />
+        </div>
+
+        {/* Main content */}
+        <div className="col-10 offset-2" style={{ padding: '20px' }}>
+          <h1>Welcome to withdrawals</h1>
+        </div>
       </div>
     </div>
   );

@@ -9,8 +9,6 @@ const WebHome = () => {
       navigate('/superadminlogin');
     } else if (page === 'adminlogin') {
       navigate('/adminlogin');
-    } else if (page === 'employeelogin') {
-      navigate('/employeelogin');
     }
   };
 
@@ -29,7 +27,6 @@ const WebHome = () => {
       <br />
       <button onClick={() => handleButtonClick('adminlogin')}>Admin</button>
       <br />
-      <button onClick={() => handleButtonClick('employeelogin')}>Employee</button>
     </div>
   );
 };

@@ -1,32 +1,24 @@
-// File: AdminLoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext'; // Ensure this import is correct
 
 const AdminLoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth(); // Make sure useAuth is correctly returning login
 
   const handleLogin = () => {
-    // Simulate login logic (Replace with real authentication)
-    if (email === 'admin@gmail.com' && password === 'admin') {
-      // Navigate to admin dashboard on successful login
-      navigate('/admindashboard');
+    if (email === 'admin' && password === 'adminpass') {
+      login('admin'); // Set user role to admin
+      navigate('/registrations');
     } else {
       alert('Invalid credentials');
     }
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-      }}
-    >
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <h1>Admin Login Page</h1>
       <input
         type="email"
