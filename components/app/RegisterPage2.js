@@ -7,7 +7,7 @@ import { initializeApp } from 'firebase/app';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ModalSelector from 'react-native-modal-selector';
-import { registerUser, updateUserImages } from '../app/api'; // Import API functions
+import { registerUser, updateUserImages } from '../api'; // Import API functions
 
 // Firebase configuration
 const firebaseConfig = {

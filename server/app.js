@@ -86,6 +86,19 @@ app.get("/", (req, res) => {
     res.send({ status: "started" });
 });
 
+// Route to get all users from the "registrations" collection
+app.get('/registrations', async (req, res) => {
+    try {
+        const users = await User.find(); // Fetch all users
+        console.log('Users fetched:', users); // Debugging log
+        res.json(users);
+    } catch (error) {
+        console.error('Error fetching registrations:', error);
+        res.status(500).json({ message: "Error fetching registrations", error });
+    }
+});
+
+
 app.post('/register', async (req, res) => {
     const { 
         firstName,

@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://192.168.1.12:3000'; // Replace with your backend URL
+const BASE_URL = 'http://192.168.254.113:3000'; // Replace with your backend URL
 
 // Function to register a user
 export const registerUser = async (formData) => {
     try {
-        const response = await axios.post(`${BASE_URL}/register`, formData);
+        const response = await axios.post(`${BASE_URL}/registrations`, formData);
         return response.data;
     } catch (error) {
         console.error('Error during registration:', error);

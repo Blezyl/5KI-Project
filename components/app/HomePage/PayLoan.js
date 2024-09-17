@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Alert, Scr
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import ModalSelector from 'react-native-modal-selector';
-import { handleLoanPayment } from '../api'; // Import API function
+import { handleLoanPayment } from '../../api'; // Import API function
 
 const PayLoan = () => {
   const navigation = useNavigation();

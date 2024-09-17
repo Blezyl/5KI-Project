@@ -4,7 +4,7 @@ import { View, TextInput, Button, Text, StyleSheet, TouchableOpacity, ScrollView
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import ModalSelector from 'react-native-modal-selector';
-import { submitLoanApplication } from '../api'; // Import API function
+import { submitLoanApplication } from '../../api'; // Import API function
 
 const ApplyLoan = () => {
   const navigation = useNavigation();
