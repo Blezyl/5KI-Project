@@ -193,6 +193,18 @@ app.post('/pay-loan', async (req, res) => {
     }
 });
 
+// Route to get all users from the "registrations" collection
+app.get('/deposits', async (req, res) => {
+    try {
+        const users = await User.find(); // Fetch all users
+        console.log('Users fetched:', users); // Debugging log
+        res.json(users);
+    } catch (error) {
+        console.error('Error fetching deposits:', error);
+        res.status(500).json({ message: "Error fetching deposits", error });
+    }
+});
+
 app.post('/deposit', async (req, res) => {
     const {
         depositOption,
@@ -240,6 +252,43 @@ app.post('/withdraw', async (req, res) => {
         res.status(500).json({ message: "Error processing withdrawal", error });
     }
 });
+
+
+// Adding the new Admin schema and model
+const adminSchema = new mongoose.Schema({
+    firstName: String,
+    middleName: String,
+    lastName: String,
+    gender: String,
+    email: String,
+    password: String
+});
+
+const Admin = mongoose.model('Admin', adminSchema, 'admins');
+
+// Route to add an admin
+app.post('/add-admin', async (req, res) => {
+    const { firstName, middleName, lastName, gender, email, password } = req.body;
+
+    try {
+        const newAdmin = new Admin({
+            firstName,
+            middleName,
+            lastName,
+            gender,
+            email,
+            password
+        });
+
+        const savedAdmin = await newAdmin.save();
+        res.status(201).json(savedAdmin);
+    } catch (error) {
+        console.error("Error adding admin:", error);
+        res.status(500).json({ message: "Error adding admin", error });
+    }
+});
+
+
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");

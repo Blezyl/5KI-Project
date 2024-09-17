@@ -1,9 +1,9 @@
 // File: AdminDashboard.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from './Sidebar'; // Adjust the path if necessary
+import Sidebar from '../Sidebar'; // Adjust the path if necessary
 
-const Payments = () => {
+const Loans = () => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -14,11 +14,11 @@ const Payments = () => {
 
         {/* Main content */}
         <div className="col-10 offset-2" style={{ padding: '20px' }}>
-          <h1>Welcome to Payments</h1>
+          <h1>Welcome to loans</h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default Payments;
+export default Loans;

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap';
 import { InfoCircle, CheckCircle, XCircle } from 'react-bootstrap-icons';
 import axios from 'axios';  // Install axios if not installed
-import Sidebar from './Sidebar'; // Adjust the path if necessary
+import Sidebar from '../Sidebar'; // Adjust the path if necessary
 
 const Registrations = () => {
   const [registrations, setRegistrations] = useState([]);

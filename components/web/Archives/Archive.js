@@ -1,7 +1,7 @@
 // File: AdminDashboard.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from './Sidebar'; // Adjust the path if necessary
+import Sidebar from '../Sidebar'; // Adjust the path if necessary
 
 const Archives = () => {
   return (
